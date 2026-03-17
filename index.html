@@ -44,7 +44,7 @@
       margin-bottom: 0;
       font-weight: 800;
     }
-    
+
     .date {
       font-weight: 500;
     }
@@ -57,6 +57,8 @@
 
     .abstract {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 1rem;
     }
 
@@ -103,18 +105,32 @@
       margin-top: 750px;
     }
 
-    @media (max-width: 375px){
+    @media (max-width: 425px) {
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
       .card {
         width: 300px;
         height: 480px;
-        margin: auto 20px;
         padding: 1.5rem;
         grid-template-rows: 200px auto;
       }
 
-      .abstract {
-        height: 100%;
-        object-fit: cover;
+      .tag {
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+    }
+
+    @media (max-width: 375px) {
+      .card {
+        margin: auto 25px;
       }
 
       h1 {
@@ -127,6 +143,17 @@
 
       .full-name {
         font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .card {
+        grid-template-rows: 180px auto;
+        margin: auto 20px;
+      }
+
+      h1 {
+        font-size: 1.3rem;
       }
     }
   </style>
